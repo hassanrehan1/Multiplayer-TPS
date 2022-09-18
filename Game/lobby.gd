@@ -57,7 +57,7 @@ remote func register_player(id):#, info):
 var spawn_index = 0
 sync func add_player(id):
 	var players_node = get_node(PLAYERS_PATH)
-	var player = load('res://Game/Player/Player/Player.tscn').instance()
+	var player = preload('res://Game/Player/Player.tscn').instance()
 	player.set_name(str(id))
 	player.set_network_master(id)
 	
